@@ -1,0 +1,8 @@
+{
+  "preference": 0.05,
+  "long_term": 0.40,
+  "frequency": 0.05,
+  "task": 0.25,
+  "confidence": 0.15,
+  "recency": 0.10
+}
