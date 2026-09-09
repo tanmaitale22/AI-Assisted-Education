@@ -1,6 +1,0 @@
-{
-  "Research Assistant": ["research", "topic", "paper", "project", "goal", "method", "hypothesis", "experiment", "finding", "research topic", "software engineer", "secure memory"],
-  "Coding Assistant": ["code", "python", "bug", "debug", "api", "library", "repository", "refactor", "test", "software engineer", "engineer", "programming", "language"],
-  "Healthcare Assistant": ["patient", "treatment", "symptom", "careplan", "medication", "diagnosis", "clinic"],
-  "Personal Assistant": ["schedule", "meeting", "reminder", "travel", "birthday", "favorite", "prefer", "calendar"]
-}
