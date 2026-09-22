@@ -24,8 +24,8 @@
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#uses">
-  <rdfs:domain rdf:resource="#Algorithm"/>
-  <rdfs:range rdf:resource="#DataStructure"/>
+  <rdfs:domain rdf:resource="#Concept"/>
+  <rdfs:range rdf:resource="#Concept"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="#solves">
@@ -71,28 +71,228 @@
   <rdfs:subClassOf rdf:resource="#Concept"/>
 </owl:Class>
 
-<owl:NamedIndividual rdf:about="#Graph_Traversal">
+<owl:NamedIndividual rdf:about="#Design_and_Analysis_of_Algorithms">
+  <rdf:type rdf:resource="#Subject"/>
+  <hasTopic rdf:resource="#Fundamentals_of_Algorithms"/>
+  <hasTopic rdf:resource="#Analysis_of_Algorithms"/>
+  <hasTopic rdf:resource="#Recurrence_Relations"/>
+  <hasTopic rdf:resource="#Searching"/>
+  <hasTopic rdf:resource="#Sorting"/>
+  <hasTopic rdf:resource="#Graph_Algorithms"/>
+  <hasTopic rdf:resource="#Shortest_Path_Algorithms"/>
+  <hasTopic rdf:resource="#Minimum_Spanning_Trees"/>
+  <hasTopic rdf:resource="#Trees"/>
+  <hasTopic rdf:resource="#Heaps_and_Priority_Queues"/>
+  <hasTopic rdf:resource="#Hashing"/>
+  <hasTopic rdf:resource="#String_Algorithms"/>
+  <hasTopic rdf:resource="#Computational_Complexity"/>
+  <hasTopic rdf:resource="#Algorithm_Correctness"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fundamentals_of_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Brute_Force"/>
+  <hasSubtopic rdf:resource="#Divide_and_Conquer"/>
+  <hasSubtopic rdf:resource="#Greedy_Method"/>
+  <hasSubtopic rdf:resource="#Dynamic_Programming"/>
+  <hasSubtopic rdf:resource="#Backtracking"/>
+  <hasSubtopic rdf:resource="#Branch_and_Bound"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Analysis_of_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Time_Complexity"/>
+  <hasSubtopic rdf:resource="#Space_Complexity"/>
+  <hasSubtopic rdf:resource="#Asymptotic_Notations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Recurrence_Relations">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Master_Theorem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Searching">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Linear_Search"/>
+  <hasSubtopic rdf:resource="#Binary_Search"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sorting">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Bubble_Sort"/>
+  <hasSubtopic rdf:resource="#Selection_Sort"/>
+  <hasSubtopic rdf:resource="#Insertion_Sort"/>
+  <hasSubtopic rdf:resource="#Merge_Sort"/>
+  <hasSubtopic rdf:resource="#Quick_Sort"/>
+  <hasSubtopic rdf:resource="#Heap_Sort"/>
+  <hasSubtopic rdf:resource="#Counting_Sort"/>
+  <hasSubtopic rdf:resource="#Radix_Sort"/>
+  <hasSubtopic rdf:resource="#Bucket_Sort"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Graph_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Breadth_First_Search"/>
+  <hasSubtopic rdf:resource="#Depth_First_Search"/>
+  <hasSubtopic rdf:resource="#Topological_Sort"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shortest_Path_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Dijkstras_Algorithm"/>
+  <hasSubtopic rdf:resource="#Bellman_Ford_Algorithm"/>
+  <hasSubtopic rdf:resource="#Floyd_Warshall_Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Minimum_Spanning_Trees">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Kruskals_Algorithm"/>
+  <hasSubtopic rdf:resource="#Prims_Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Trees">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Binary_Search_Tree"/>
+  <hasSubtopic rdf:resource="#AVL_Tree"/>
+  <hasSubtopic rdf:resource="#Red_Black_Tree"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Heaps_and_Priority_Queues">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Binary_Heap"/>
+  <hasSubtopic rdf:resource="#Priority_Queue"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hashing">
+  <rdf:type rdf:resource="#Topic"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#String_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#KMP_Algorithm"/>
+  <hasSubtopic rdf:resource="#Rabin_Karp_Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Computational_Complexity">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#P_vs_NP"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Algorithm_Correctness">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Loop_Invariant"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Brute_Force">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Divide_and_Conquer">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Greedy_Method">
+  <rdf:type rdf:resource="#Technique"/>
+  <requires rdf:resource="#Greedy_Choice_Property"/>
+  <requires rdf:resource="#Optimal_Substructure"/>
+  <relatedTo rdf:resource="#Fractional_Knapsack_Problem"/>
+  <relatedTo rdf:resource="#Activity_Selection_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dynamic_Programming">
+  <rdf:type rdf:resource="#Technique"/>
+  <requires rdf:resource="#Optimal_Substructure"/>
+  <requires rdf:resource="#Overlapping_Subproblems"/>
+  <relatedTo rdf:resource="#0_1_Knapsack_Problem"/>
+  <relatedTo rdf:resource="#Longest_Common_Subsequence_Problem"/>
+  <relatedTo rdf:resource="#Matrix_Chain_Multiplication_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Backtracking">
+  <rdf:type rdf:resource="#Technique"/>
+  <relatedTo rdf:resource="#N_Queens_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Branch_and_Bound">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Time_Complexity">
   <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Space_Complexity">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Asymptotic_Notations">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Master_Theorem">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Linear_Search">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Binary_Search">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Divide_and_Conquer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bubble_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Selection_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Insertion_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Merge_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Divide_and_Conquer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Quick_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Divide_and_Conquer"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Heap_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Binary_Heap"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Counting_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Radix_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bucket_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Breadth_First_Search">
   <rdf:type rdf:resource="#Algorithm"/>
-  <relatedTo rdf:resource="#Graph_Traversal"/>
   <uses rdf:resource="#Queue"/>
-</owl:NamedIndividual>
-
-<owl:NamedIndividual rdf:about="#Queue">
-  <rdf:type rdf:resource="#DataStructure"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Depth_First_Search">
   <rdf:type rdf:resource="#Algorithm"/>
-  <relatedTo rdf:resource="#Graph_Traversal"/>
   <uses rdf:resource="#Stack"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Stack">
-  <rdf:type rdf:resource="#DataStructure"/>
+<owl:NamedIndividual rdf:about="#Topological_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Dijkstras_Algorithm">
@@ -100,36 +300,659 @@
   <solves rdf:resource="#Shortest_Path_Problem"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Shortest_Path_Problem">
-  <rdf:type rdf:resource="#Problem"/>
+<owl:NamedIndividual rdf:about="#Bellman_Ford_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <solves rdf:resource="#Shortest_Path_Problem"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Dynamic_Programming">
-  <rdf:type rdf:resource="#Technique"/>
-  <requires rdf:resource="#Optimal_Substructure"/>
-  <requires rdf:resource="#Overlapping_Subproblems"/>
+<owl:NamedIndividual rdf:about="#Floyd_Warshall_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <solves rdf:resource="#Shortest_Path_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kruskals_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Disjoint_Set_Union"/>
+  <solves rdf:resource="#Minimum_Spanning_Tree_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Prims_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Priority_Queue"/>
+  <solves rdf:resource="#Minimum_Spanning_Tree_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Binary_Search_Tree">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#AVL_Tree">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Red_Black_Tree">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Binary_Heap">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Priority_Queue">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#KMP_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rabin_Karp_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#P_vs_NP">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Loop_Invariant">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Greedy_Choice_Property">
+  <rdf:type rdf:resource="#Concept"/>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#Optimal_Substructure">
   <rdf:type rdf:resource="#Concept"/>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#Fractional_Knapsack_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Activity_Selection_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#Overlapping_Subproblems">
   <rdf:type rdf:resource="#Concept"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Merge_Sort">
-  <rdf:type rdf:resource="#Algorithm"/>
-  <uses rdf:resource="#Divide_and_Conquer"/>
-  <relatedTo rdf:resource="#Sorting"/>
+<owl:NamedIndividual rdf:about="#0_1_Knapsack_Problem">
+  <rdf:type rdf:resource="#Problem"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Divide_and_Conquer">
+<owl:NamedIndividual rdf:about="#Longest_Common_Subsequence_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Matrix_Chain_Multiplication_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#N_Queens_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Queue">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stack">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shortest_Path_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Disjoint_Set_Union">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Minimum_Spanning_Tree_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Huffman_Coding">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Min_Heap"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Min_Heap">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Decrease_and_Conquer">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Decrease_by_One"/>
+  <hasSubtopic rdf:resource="#Decrease_by_a_Constant_Factor"/>
+  <hasSubtopic rdf:resource="#Variable_Decrease"/>
+  <hasSubtopic rdf:resource="#Insertion_Sort"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Decrease_by_One">
   <rdf:type rdf:resource="#Technique"/>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#Sorting">
+<owl:NamedIndividual rdf:about="#Decrease_by_a_Constant_Factor">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Variable_Decrease">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Transform_and_Conquer">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Instance_Simplification"/>
+  <hasSubtopic rdf:resource="#Representation_Change"/>
+  <hasSubtopic rdf:resource="#Problem_Reduction"/>
+  <hasSubtopic rdf:resource="#Heap"/>
+  <hasSubtopic rdf:resource="#Balanced_Search_Tree"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Instance_Simplification">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Representation_Change">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Problem_Reduction">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Heap">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Balanced_Search_Tree">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lower_Bounds_and_Decision_Trees">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Lower_Bound"/>
+  <hasSubtopic rdf:resource="#Decision_Tree"/>
+  <hasSubtopic rdf:resource="#Comparison_Sorting_Lower_Bound"/>
+  <hasSubtopic rdf:resource="#Counting_Sort"/>
+  <hasSubtopic rdf:resource="#Radix_Sort"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lower_Bound">
   <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Decision_Tree">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Comparison_Sorting_Lower_Bound">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Amortized_Analysis">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Aggregate_Method"/>
+  <hasSubtopic rdf:resource="#Accounting_Method"/>
+  <hasSubtopic rdf:resource="#Potential_Method"/>
+  <hasSubtopic rdf:resource="#Dynamic_Array"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Aggregate_Method">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Accounting_Method">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Potential_Method">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dynamic_Array">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Randomized_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Las_Vegas_Algorithm"/>
+  <hasSubtopic rdf:resource="#Monte_Carlo_Algorithm"/>
+  <hasSubtopic rdf:resource="#Randomized_Quickselect"/>
+  <hasSubtopic rdf:resource="#Randomized_Quicksort"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Las_Vegas_Algorithm">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Monte_Carlo_Algorithm">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Randomized_Quickselect">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Randomized_Quicksort">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Las_Vegas_Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Disjoint_Set_Union_Topic_Area">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Disjoint_Set_Union_Data_Structure"/>
+  <hasSubtopic rdf:resource="#Union_by_Rank"/>
+  <hasSubtopic rdf:resource="#Path_Compression"/>
+  <hasSubtopic rdf:resource="#Inverse_Ackermann_Function"/>
+  <hasSubtopic rdf:resource="#Kruskals_Algorithm"/>
+  <hasSubtopic rdf:resource="#Minimum_Spanning_Tree_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Disjoint_Set_Union_Data_Structure">
+  <rdf:type rdf:resource="#DataStructure"/>
+  <relatedTo rdf:resource="#Union_by_Rank"/>
+  <relatedTo rdf:resource="#Path_Compression"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Union_by_Rank">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Path_Compression">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Inverse_Ackermann_Function">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Strongly_Connected_Components">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Strongly_Connected_Component"/>
+  <hasSubtopic rdf:resource="#Kosarajus_Algorithm"/>
+  <hasSubtopic rdf:resource="#Tarjans_SCC_Algorithm"/>
+  <hasSubtopic rdf:resource="#Depth_First_Search"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Strongly_Connected_Component">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Kosarajus_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Depth_First_Search"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tarjans_SCC_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Depth_First_Search"/>
+  <requires rdf:resource="#Low_Link_Value"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Articulation_Points_and_Bridges">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Articulation_Point"/>
+  <hasSubtopic rdf:resource="#Bridge"/>
+  <hasSubtopic rdf:resource="#Low_Link_Value"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Articulation_Point">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bridge">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Low_Link_Value">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Euler_vs_Hamiltonian">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Euler_Path"/>
+  <hasSubtopic rdf:resource="#Euler_Circuit"/>
+  <hasSubtopic rdf:resource="#Hamiltonian_Path"/>
+  <hasSubtopic rdf:resource="#Hamiltonian_Cycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Euler_Path">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Euler_Circuit">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hamiltonian_Path">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hamiltonian_Cycle">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Maximum_Flow_and_Minimum_Cut">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Residual_Graph"/>
+  <hasSubtopic rdf:resource="#Ford_Fulkerson_Method"/>
+  <hasSubtopic rdf:resource="#Edmonds_Karp_Algorithm"/>
+  <hasSubtopic rdf:resource="#Max_Flow_Min_Cut_Theorem"/>
+  <hasSubtopic rdf:resource="#Maximum_Flow_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Residual_Graph">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ford_Fulkerson_Method">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Residual_Graph"/>
+  <solves rdf:resource="#Maximum_Flow_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Edmonds_Karp_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <solves rdf:resource="#Maximum_Flow_Problem"/>
+  <uses rdf:resource="#Augmenting_Path"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Max_Flow_Min_Cut_Theorem">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Maximum_Flow_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bipartite_Matching">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Bipartite_Graph"/>
+  <hasSubtopic rdf:resource="#Maximum_Bipartite_Matching_Problem"/>
+  <hasSubtopic rdf:resource="#Halls_Marriage_Theorem"/>
+  <hasSubtopic rdf:resource="#Augmenting_Path"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bipartite_Graph">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Maximum_Bipartite_Matching_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+  <relatedTo rdf:resource="#Maximum_Flow_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Halls_Marriage_Theorem">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Augmenting_Path">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Segment_Trees_Topic_Area">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Segment_Tree"/>
+  <hasSubtopic rdf:resource="#Lazy_Propagation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Segment_Tree">
+  <rdf:type rdf:resource="#DataStructure"/>
+  <relatedTo rdf:resource="#Lazy_Propagation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Lazy_Propagation">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fenwick_Trees_Topic_Area">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Fenwick_Tree"/>
+  <hasSubtopic rdf:resource="#Prefix_Sum"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Fenwick_Tree">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Prefix_Sum">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tries_Topic_Area">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Trie"/>
+  <hasSubtopic rdf:resource="#Compressed_Trie"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Trie">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Compressed_Trie">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#String_Matching_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Z_Algorithm"/>
+  <hasSubtopic rdf:resource="#Z_Array"/>
+  <hasSubtopic rdf:resource="#Knuth_Morris_Pratt_Algorithm"/>
+  <hasSubtopic rdf:resource="#Pattern_Matching_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Z_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <uses rdf:resource="#Z_Array"/>
+  <solves rdf:resource="#Pattern_Matching_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Z_Array">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Knuth_Morris_Pratt_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <solves rdf:resource="#Pattern_Matching_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pattern_Matching_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Suffix_Arrays_and_LCP">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Suffix_Array"/>
+  <hasSubtopic rdf:resource="#LCP_Array"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Suffix_Array">
+  <rdf:type rdf:resource="#DataStructure"/>
+  <relatedTo rdf:resource="#LCP_Array"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#LCP_Array">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#External_Sorting">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#External_Merge_Sort"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#External_Merge_Sort">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#B_Trees_and_B+_Trees">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#B_Tree"/>
+  <hasSubtopic rdf:resource="#B+_Tree"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#B_Tree">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#B+_Tree">
+  <rdf:type rdf:resource="#DataStructure"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Approximation_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Approximation_Ratio"/>
+  <hasSubtopic rdf:resource="#Vertex_Cover_Approximation_Algorithm"/>
+  <hasSubtopic rdf:resource="#Vertex_Cover_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Approximation_Ratio">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vertex_Cover_Approximation_Algorithm">
+  <rdf:type rdf:resource="#Algorithm"/>
+  <solves rdf:resource="#Vertex_Cover_Problem"/>
+  <requires rdf:resource="#Approximation_Ratio"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vertex_Cover_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#NP_Reductions">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Polynomial_Time_Reduction"/>
+  <hasSubtopic rdf:resource="#NP_Hardness"/>
+  <hasSubtopic rdf:resource="#NP_Completeness"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Polynomial_Time_Reduction">
+  <rdf:type rdf:resource="#Technique"/>
+  <relatedTo rdf:resource="#NP_Completeness"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#NP_Hardness">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#NP_Completeness">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Parallel_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Work"/>
+  <hasSubtopic rdf:resource="#Span"/>
+  <hasSubtopic rdf:resource="#Tree_Reduction"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Work">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Span">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tree_Reduction">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Meet_in_the_Middle">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Meet_in_the_Middle_Technique"/>
+  <hasSubtopic rdf:resource="#Subset_Sum_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Meet_in_the_Middle_Technique">
+  <rdf:type rdf:resource="#Technique"/>
+  <relatedTo rdf:resource="#Subset_Sum_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Subset_Sum_Problem">
+  <rdf:type rdf:resource="#Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Algorithm_Engineering">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Asymptotic_Complexity_vs_Practical_Performance"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Asymptotic_Complexity_vs_Practical_Performance">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Algorithm_Fundamentals">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Brute_Force_Strategy"/>
+  <hasSubtopic rdf:resource="#Divide_and_Conquer_Strategy"/>
+  <hasSubtopic rdf:resource="#Greedy_Method"/>
+  <hasSubtopic rdf:resource="#Dynamic_Programming_Strategy"/>
+  <hasSubtopic rdf:resource="#Backtracking_Strategy"/>
+  <hasSubtopic rdf:resource="#Branch_and_Bound_Strategy"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Complexity_Analysis">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Time_Complexity"/>
+  <hasSubtopic rdf:resource="#Space_Complexity"/>
+  <hasSubtopic rdf:resource="#Asymptotic_Notations"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Greedy_Algorithms">
+  <rdf:type rdf:resource="#Topic"/>
+  <hasSubtopic rdf:resource="#Activity_Selection"/>
+  <hasSubtopic rdf:resource="#Fractional_Knapsack_Problem"/>
+  <hasSubtopic rdf:resource="#Huffman_Coding"/>
+  <hasSubtopic rdf:resource="#Greedy_Choice_Property"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Brute_Force_Strategy">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Divide_and_Conquer_Strategy">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Dynamic_Programming_Strategy">
+  <rdf:type rdf:resource="#Technique"/>
+  <requires rdf:resource="#Optimal_Substructure"/>
+  <requires rdf:resource="#Overlapping_Subproblems"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Backtracking_Strategy">
+  <rdf:type rdf:resource="#Technique"/>
+  <relatedTo rdf:resource="#N_Queens_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Branch_and_Bound_Strategy">
+  <rdf:type rdf:resource="#Technique"/>
+  <relatedTo rdf:resource="#0_1_Knapsack_Problem"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Substitution_Method">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Recursion_Tree">
+  <rdf:type rdf:resource="#Technique"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Sorted_Data">
+  <rdf:type rdf:resource="#Concept"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Activity_Selection">
+  <rdf:type rdf:resource="#Algorithm"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Hash_Table">
+  <rdf:type rdf:resource="#DataStructure"/>
 </owl:NamedIndividual>
 
 

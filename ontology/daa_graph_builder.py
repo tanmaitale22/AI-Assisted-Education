@@ -1,7 +1,7 @@
 from pathlib import Path
 from owlready2 import get_ontology
 
-from daa_ontology import (
+from ontology.daa_ontology import (
     Subject,
     Topic,
     Concept,
@@ -29,19 +29,6 @@ GRAPH_PATH = (
     / "daa_knowledge_graph.owl"
 )
 
-# --------------------------------
-# Node type mapping
-# --------------------------------
-
-NODE_TYPES = {
-    "Subject": Subject,
-    "Topic": Topic,
-    "Concept": Concept,
-    "Algorithm": Algorithm,
-    "DataStructure": DataStructure,
-    "Problem": Problem,
-    "Technique": Technique
-}
 
 # --------------------------------
 # Relationship type mapping
@@ -91,9 +78,17 @@ def load_knowledge_graph():
             GRAPH_PATH.as_uri()
         ).load()
 
-    raise FileNotFoundError(
-        f"Knowledge graph not found: {GRAPH_PATH}"
+    print(
+        "\nNo existing knowledge graph found."
     )
+
+    print(
+        "Creating a fresh knowledge graph..."
+    )
+
+    from ontology.daa_ontology import onto
+
+    return onto
 
 
 # --------------------------------
@@ -123,6 +118,16 @@ def build_daa_graph(extracted_knowledge):
 
     # Load the EXISTING knowledge graph
     graph = load_knowledge_graph()
+    
+    NODE_TYPES = {
+        "Subject": graph.Subject,
+        "Topic": graph.Topic,
+        "Concept": graph.Concept,
+        "Algorithm": graph.Algorithm,
+        "DataStructure": graph.DataStructure,
+        "Problem": graph.Problem,
+        "Technique": graph.Technique
+    }
 
     nodes = {}
 

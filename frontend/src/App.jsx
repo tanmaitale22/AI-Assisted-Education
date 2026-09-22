@@ -641,11 +641,16 @@ function App() {
         }
       );
 
-      if (!response.ok) {
-        throw new Error("Upload failed");
-      }
+      const data = await response.json();
 
-      await response.json();
+      console.log("UPLOAD STATUS:", response.status);
+      console.log("UPLOAD RESPONSE:", data);
+
+      if (!response.ok) {
+        throw new Error(
+          data.detail || `Upload failed with status ${response.status}`
+        );
+      }
 
       setUploadMessage(
         "✅ Files uploaded successfully!"
@@ -654,10 +659,10 @@ function App() {
       setSelectedFiles([]);
 
     } catch (error) {
-      console.error(error);
+      console.error("UPLOAD ERROR:", error);
 
       setUploadMessage(
-        "❌ Upload failed. Please try again."
+        `❌ ${error.message}`
       );
 
     } finally {

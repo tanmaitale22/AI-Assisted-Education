@@ -1,10 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import cytoscape from "cytoscape";
 import "./App.css";
  
 
 function KnowledgeGraph() {
   const containerRef = useRef(null);
+  const [selectedNode, setSelectedNode] = useState(null);
 
   useEffect(() => {
     let cy;
@@ -83,6 +84,26 @@ function KnowledgeGraph() {
           }
         });
 
+        cy.on("tap", "node", async (event) => {
+          const node = event.target;
+
+          const nodeName = node.data("label");
+          console.log("CLICKED NODE:", nodeName);
+
+          const response = await fetch(
+            `http://127.0.0.1:8000/knowledge-graph/node/${encodeURIComponent(nodeName)}`
+          );
+
+          const data = await response.json();
+
+          console.log("NODE CONTEXT:", data);
+
+          setSelectedNode({
+            name: nodeName,
+            chunks: data.chunks
+          });
+        });
+
         // Make Cytoscape automatically zoom
         // to properly fill the available space
         setTimeout(() => {
@@ -109,6 +130,7 @@ function KnowledgeGraph() {
 
   return (
     <div className="knowledge-graph-page">
+
       <div className="knowledge-graph-container">
 
         <h2>DAA Knowledge Graph</h2>
@@ -119,6 +141,41 @@ function KnowledgeGraph() {
         />
 
       </div>
+
+      {selectedNode && (
+        <div className="node-details-panel">
+
+          <h2>{selectedNode.name}</h2>
+
+          <h3>Study Material</h3>
+
+          {selectedNode.chunks.length === 0 ? (
+            <p>No matching study material found.</p>
+          ) : (
+            selectedNode.chunks.map((chunk, index) => (
+              <div className="chunk-card" key={index}>
+
+                <p>
+                  {chunk.content}
+                </p>
+
+                <small>
+                  Topic: {chunk.topic}
+                </small>
+
+                <br />
+
+                <small>
+                  Subtopic: {chunk.subtopic}
+                </small>
+
+              </div>
+            ))
+          )}
+
+        </div>
+      )}
+
     </div>
   );
 }

@@ -21,10 +21,19 @@ VALID_NODE_TYPES = {
 # --------------------------------
 
 RELATIONSHIP_RULES = {
+    "hasTopic": (
+        {"Subject"},
+        {"Topic"}
+    ),
+
+    "hasSubtopic": (
+        {"Topic"},
+        {"Concept", "Algorithm", "DataStructure", "Problem", "Technique"}
+    ),
 
     "uses": (
-        {"Algorithm"},
-        {"DataStructure"}
+        {"Algorithm", "Technique", "DataStructure", "Concept"},
+        {"Algorithm", "Technique", "DataStructure", "Concept"}
     ),
 
     "solves": (
@@ -38,8 +47,8 @@ RELATIONSHIP_RULES = {
     ),
 
     "relatedTo": (
-        VALID_NODE_TYPES,
-        VALID_NODE_TYPES
+        {"Concept", "Algorithm", "DataStructure", "Problem", "Technique"},
+        {"Concept", "Algorithm", "DataStructure", "Problem", "Technique"}
     )
 }
 

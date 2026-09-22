@@ -65,8 +65,8 @@ with onto:
 
 
     class uses(ObjectProperty):
-        domain = [Algorithm]
-        range = [DataStructure]
+        domain = [Concept]
+        range = [Concept]
 
 
     class solves(ObjectProperty):
