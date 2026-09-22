@@ -1,8 +1,17 @@
+# 1. Create/update .gitignore
 cat >> .gitignore <<'EOF'
+
+# Python virtual environment
 venv/
 .venv/
+
+# Uploaded files / large media
+uploads/
+
+# Python cache
 __pycache__/
 *.pyc
-uploads/*.mp4
+
+# macOS
 .DS_Store
 EOF
